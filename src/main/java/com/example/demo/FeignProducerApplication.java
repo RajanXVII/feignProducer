@@ -27,7 +27,7 @@ public class FeignProducerApplication extends WebSecurityConfigurerAdapter{
 	
 	@GetMapping("/home")
 	public ResponseEntity<String> home() {
-		return new ResponseEntity<String>("Dummy Down",HttpStatus.NOT_FOUND);
+		return ResponseEntity.notFound().build();
 	}
 	
 	
